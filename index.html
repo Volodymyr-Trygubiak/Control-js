@@ -13,7 +13,7 @@
 
 <body>
 
-  <header class="header light">
+  <header id="header" class="header light">
     <div class="container">
       <div class="header__content">
 
@@ -30,15 +30,33 @@
           </div>
 
           <ul class="nav__menu">
-            <li class="nav__item"><a href="#" class="nav__link active">about us</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">projectss</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">news</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
+            <li class="nav__item">
+              <a href="#header" class="nav__link active">about us</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#news" class="nav__link">news</a>
+            </li>
+            <li class="nav__item">
+              <a href="#map" class="nav__link">contact</a>
+            </li>
           </ul>
+
           <ul class="nav__social social">
-            <li class="social__item"><a href="#" class="social__link icon-facebook"></a></li>
-            <li class="social__item"><a href="#" class="social__link icon-twitter"></a></li>
-            <li class="social__item"><a href="#" class="social__link icon-instagram"></a></li>
+            <li class="social__item">
+              <a href="#" class="social__link icon-facebook">
+
+            </a></li>
+            <li class="social__item">
+              <a href="#" class="social__link icon-twitter">
+
+            </a></li>
+            <li class="social__item">
+              <a href="#" class="social__link icon-instagram">
+
+            </a></li>
           </ul>
         </nav>
 
@@ -47,14 +65,15 @@
           <span class="header__subtitle">We make the world's beautiful every day</span>
         </div>
 
-        <button class="header__btn btn"></button>
+        <a href="#projects"class="header__btn btn"></a>
+
       </div>
     </div>
   </header>
 
-  <section class="projectss">
+  <section id="projects" class="projects">
     <div class="container">
-      <div class="projectss__content">
+      <div class="projects__content">
         <h2 class="projects__main-title">what we do</h2>
 
         <div class="projects__trade">
@@ -94,7 +113,7 @@
     </div>
   </section>
 
-  <section class="news light">
+  <section id="news" class="news light">
     <div class="container">
       <div class="news__content">
         <h2 class="news__title">latest news</h2>
@@ -237,9 +256,8 @@
     </div>
   </section>
 
-  <section class="map">
-
-
+  <section id="" class="map">
+    <div id="map"></div>
 
   </section>
 
@@ -260,6 +278,8 @@
     </div>
   </section>
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZHcr4mVgAuzry2xFpadKwOZVJvhPuHRk&callback=initMap&libraries=&v=weekly" defer>
+  </script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./app.js"></script>
 </body>
