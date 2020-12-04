@@ -1,14 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Monticello</title>
+  <link rel="stylesheet" href="./icons/style.css">
+  <link rel="stylesheet" href="./fonts/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
-  
 
+<body>
+
+  <header class="header light">
+    <div class="container">
+      <div class="header__content">
+
+        <nav class="nav">
+          <div class="nav__wrap">
+            <a href="#" class="nav__logo logo">
+              <img src="./img/Logo.png" alt="Monticello">
+            </a>
+
+            <div class="toggle">
+              <div class="toggle__btn icon-menu"></div>
+              <div class="toggle__btn icon-close close"></div>
+            </div>
+          </div>
+
+          <ul class="nav__menu">
+            <li class="nav__item"><a href="#" class="nav__link active">about us</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">projectss</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">news</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">contact</a></li>
+          </ul>
+          <ul class="nav__social social">
+            <li class="social__item"><a href="#" class="social__link icon-facebook"></a></li>
+            <li class="social__item"><a href="#" class="social__link icon-twitter"></a></li>
+            <li class="social__item"><a href="#" class="social__link icon-instagram"></a></li>
+          </ul>
+        </nav>
+
+        <div class="header__text">
+          <h1 class="header__title">Simple & mordern</h1>
+          <span class="header__subtitle">We make the world's beautiful every day</span>
+        </div>
+
+        <button class="header__btn btn"></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="projectss">
+    <div class="container">
+      <div class="projectss__content">
+        <h2 class="projects__main-title">what we do</h2>
+
+        <div class="projects__trade">
+          <div class="projects__trade-left">
+            <img src="./img/project-trade-bg.jpg" alt="">
+          </div>
+
+          <div class="projects__trade-right">
+            <span class="projects__subtitle">One World</span>
+            <h3 class="projects__title">Trade Center</h3>
+            <p class="projects__text">
+              Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is,
+              our thoughts are very powerful.
+            </p>
+            <button class="projects__btn btn-more">more details</button>
+            <p class="projects__location"><i class="icon icon-location"></i> New York City, United States - 1776 feet
+            </p>
+          </div>
+        </div>
+
+        <div class="projects__commerce">
+          <div class="projects__commerce-left">
+            <span class="projects__subtitle">International</span>
+            <h3 class="projects__title">Commerce Centre</h3>
+            <p class="projects__text">
+              Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a
+              digital advertising network may help.
+            </p>
+            <button class="projects__btn btn-more">more details</button>
+            <p class="projects__location"><i class="icon icon-location"></i> Hong Kong - 1588 Feet</p>
+          </div>
+          <div class="projects__commerce-right">
+            <img src="./img/project-commerce-bg.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news light">
+    <div class="container">
+      <div class="news__content">
+        <h2 class="news__title">latest news</h2>
+
+        <div class="news__wrapper">
+          <div class="news__slider swiper-container">
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="news__slide">
+                  <img src="./img/lauren-mancke-1.jpg" alt="lauren-mancke" class="news__slide-img">
+                  <div class="news__box">
+                    <div class="news__slide-wrap">
+                      <h4 class="news__slide-title">See The Unmatched Beauty Of The Great. Lakes.</h4>
+                      <p class="news__slide-text">Free directories: directories are perfect for customers that are ..
+                        searching for a
+                      </p>
+                    </div>
+                    <div class="news__user">
+                      <img class="news__user-photo" src="./img/user-1.png" alt="Isaac">
+                      <div class="news__user-info">
+                        <span class="news__user-name">isaac dunn</span>
+                        <span class="news__user-date">09 Feb 2017</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="news__slide">
+                  <img src="./img/matthew-hamilton-2.jpg" alt="matthew-hamilton" class="news__slide-img">
+                  <div class="news__box">
+                    <div class="news__slide-wrap">
+                      <h4 class="news__slide-title">Effective Advertising Pointers.</h4>
+                      <p class="news__slide-text">Having a home based business is a wonderful asset to your life...
+                    </div>
+                    </p>
+                    <div class="news__user">
+                      <img class="news__user-photo" src="./img/user-2.png" alt="dominic">
+                      <div class="news__user-info">
+                        <span class="news__user-name">dominic freeman</span>
+                        <span class="news__user-date">24 Apr 2017</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide swiper-slide">
+                <div class="news__slide">
+                  <img src="./img/joel-filipe-3.jpg" alt="joel-filipe" class="news__slide-img">
+                  <div class="news__box">
+                    <div class="news__slide-wrap">
+                      <h4 class="news__slide-title">Hypnotize Yourself Into The Ghost.</h4>
+                      <p class="news__slide-text">There are many things that are important to catalog design....</p>
+                    </div>
+                    <div class="news__user">
+                      <img class="news__user-photo" src="./img/user-3.png" alt="alice">
+                      <div class="news__user-info">
+                        <span class="news__user-name">alice ward</span>
+                        <span class="news__user-date">30 Dec 2017</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="news__slide">
+                  <img src="./img/lauren-mancke-1.jpg" alt="lauren-mancke" class="news__slide-img">
+                  <div class="news__box">
+                    <div class="news__slide-wrap">
+                      <h4 class="news__slide-title">See The Unmatched Beauty Of The Great. Lakes.</h4>
+                      <p class="news__slide-text">Free directories: directories are perfect for customers that are..
+                    </div>. searching for a
+                    </p>
+                    <div class="news__user">
+                      <img class="news__user-photo" src="./img/user-1.png" alt="Isaac">
+                      <div class="news__user-info">
+                        <span class="news__user-name">isaac dunn</span>
+                        <span class="news__user-date">09 Feb 2017</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="news__slide">
+                  <img src="./img/joel-filipe-3.jpg" alt="joel-filipe" class="news__slide-img">
+                  <div class="news__box">
+                    <div class="news__slide-wrap">
+                      <h4 class="news__slide-title">Hypnotize Yourself Into The Ghost.</h4>
+                      <p class="news__slide-text">There are many things that are important to catalog design....</p>
+                    </div>
+                    <div class="news__user">
+                      <img class="news__user-photo" src="./img/user-3.png" alt="alice">
+                      <div class="news__user-info">
+                        <span class="news__user-name">alice ward</span>
+                        <span class="news__user-date">30 Dec 2017</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="news__pagination swiper-pagination"></div>
+          </div>
+          <div class="news__button-prev btn"></div>
+          <div class="news__button-next btn"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery__content">
+        <h2 class="gallery__title">Gallety</h2>
+
+        <div class="gallery__grid">
+          <div class="gallery__panel panel-big">
+            <img src="./img/scott-webb-1.jpg" alt="" class="gallery__img">
+          </div>
+          <div class="gallery__panel">
+            <img src="./img/photos-2.jpg" alt="" class="gallery__img">
+          </div>
+          <div class="gallery__panel">
+            <img src="./img/echo-grid-3.jpg" alt="" class="gallery__img">
+          </div>
+          <div class="gallery__panel">
+            <img src="./img/fuse-brussels-4.jpg" alt="" class="gallery__img">
+          </div>
+          <div class="gallery__panel">
+            <img src="./img/tu-tram-pham-5.jpg" alt="" class="gallery__img">
+          </div>
+        </div>
+
+        <button class="gallery__btn btn-more">see more</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+
+
+
+  </section>
+
+  <section class="footer light">
+    <div class="footer__content">
+      <div class="footer__top">
+        <img src="./img/Logo.png" alt="Monticello" class="logo">
+        <ul class="footer__social social">
+          <li class="social__item"><a href="#" class="social__link icon-facebook"></a></li>
+          <li class="social__item"><a href="#" class="social__link icon-twitter"></a></li>
+          <li class="social__item"><a href="#" class="social__link icon-instagram"></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__text">Copyrights &copy; 2017 Monticello</span>
+        <span class="footer__text">Made with &#10084; by Ga Huy</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./app.js"></script>
 </body>
+
 </html>
