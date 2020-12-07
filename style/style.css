@@ -911,4 +911,16 @@ h2::before {
     margin-bottom: 30px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer .social__item {
+    margin-right: 10px;
+  }
+  .footer .social:last-child {
+    margin-right: 0;
+  }
+  .footer__text {
+    font-size: 12px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

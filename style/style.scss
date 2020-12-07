@@ -847,3 +847,22 @@
     }
   }
 }
+
+@media screen and (max-width: map-get($breakpoints, md)) {
+  .footer {
+    
+    .social {
+
+      &__item {
+        margin-right: 10px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+}
