@@ -30,8 +30,8 @@
           </div>
 
           <ul class="nav__menu">
-            <li class="nav__item">
-              <a href="#header" class="nav__link active">about us</a>
+            <li class="nav__item active">
+              <a href="#header" class="nav__link ">about us</a>
             </li>
             <li class="nav__item">
               <a href="#projects" class="nav__link">projects</a>
@@ -48,15 +48,18 @@
             <li class="social__item">
               <a href="#" class="social__link icon-facebook">
 
-            </a></li>
+              </a>
+            </li>
             <li class="social__item">
               <a href="#" class="social__link icon-twitter">
 
-            </a></li>
+              </a>
+            </li>
             <li class="social__item">
               <a href="#" class="social__link icon-instagram">
 
-            </a></li>
+              </a>
+            </li>
           </ul>
         </nav>
 
@@ -65,7 +68,7 @@
           <span class="header__subtitle">We make the world's beautiful every day</span>
         </div>
 
-        <a href="#projects"class="header__btn btn"></a>
+        <a href="#projects" class="header__btn btn"></a>
 
       </div>
     </div>
@@ -78,7 +81,7 @@
 
         <div class="projects__trade">
           <div class="projects__trade-left">
-            <img src="./img/project-trade-bg.jpg" alt="">
+            <img class="projects__img" src="./img/project-trade-bg.jpg" alt="">
           </div>
 
           <div class="projects__trade-right">
@@ -106,7 +109,7 @@
             <p class="projects__location"><i class="icon icon-location"></i> Hong Kong - 1588 Feet</p>
           </div>
           <div class="projects__commerce-right">
-            <img src="./img/project-commerce-bg.jpg" alt="">
+            <img class="projects__img" src="./img/project-commerce-bg.jpg" alt="">
           </div>
         </div>
       </div>
@@ -256,8 +259,36 @@
     </div>
   </section>
 
-  <section id="" class="map">
+  <section class="map">
     <div id="map"></div>
+  </section>
+
+  <section class="info">
+
+    <div class="info__block">
+      <h2 class="info__title">get in touch</h2>
+      <div class="info__wrap">
+        <div class="info__data">
+          <p class="info__text">
+            <i class="info__icon icon-location"></i>91 Nolan Extensions Suite 670
+          </p>
+          <p class="info__text">
+            <i class="info__icon icon-phone"></i>+001 356-868-2454
+          </p>
+          <p class="info__text">
+            <i class="info__icon icon-drawer2"></i>gahuy93@gmail.com
+          </p>
+          <p class="info__text">
+            <i class="info__icon icon-clock"></i>From 07:05AM to 19:30PM
+          </p>
+        </div>
+        <form class="info__form" action="">
+          <input class="info__input" placeholder="Name" type="text">
+          <input class="info__input" placeholder="Email" type="email">
+          <button class="info__btn btn-more">Submit</button>
+        </form>
+      </div>
+    </div>
 
   </section>
 
@@ -278,8 +309,15 @@
     </div>
   </section>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZHcr4mVgAuzry2xFpadKwOZVJvhPuHRk&callback=initMap&libraries=&v=weekly" defer>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZHcr4mVgAuzry2xFpadKwOZVJvhPuHRk&callback=initMap&libraries=&v=weekly"
+    defer>
   </script>
+
+  <script>
+    
+  </script>
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./app.js"></script>
 </body>

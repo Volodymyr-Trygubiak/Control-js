@@ -68,6 +68,7 @@ h2::before {
 
 .header {
   height: 100vh;
+  min-height: 460px;
   background: #746ff8 url(../img/header-bg.jpg) center no-repeat;
   background-size: cover;
   text-align: center;
@@ -196,6 +197,14 @@ h2::before {
   height: 6px;
   border: 1.5px solid #ffffff;
   border-radius: 50%;
+}
+
+.active .nav__link::before {
+  background-color: #fff;
+}
+
+.nav__link:hover::before {
+  background-color: #fff;
 }
 
 .nav .toggle {
@@ -350,16 +359,6 @@ h2::before {
   margin-left: 50px;
 }
 
-.projects__trade::before {
-  content: '';
-  position: absolute;
-  left: -200px;
-  top: -70px;
-  width: 630px;
-  height: 470px;
-  background-color: #55b7ff;
-}
-
 .projects__commerce {
   position: relative;
 }
@@ -373,17 +372,6 @@ h2::before {
   width: 100%;
   height: 470px;
   z-index: 1;
-}
-
-.projects__commerce::before {
-  content: '';
-  position: absolute;
-  right: -200px;
-  top: -70px;
-  max-width: 630px;
-  width: 100%;
-  height: 470px;
-  background-color: #7e5aff;
 }
 
 .btn-more {
@@ -516,7 +504,7 @@ h2::before {
 .news__pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  margin: 0 10px;
+  margin: 10px;
   border: 1px solid #ffffff;
   background-color: transparent;
   opacity: 1;
@@ -559,6 +547,10 @@ h2::before {
           transform: rotate(-135deg);
 }
 
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 20px;
+}
+
 .gallery {
   padding-bottom: 100px;
   text-align: center;
@@ -594,13 +586,98 @@ h2::before {
 
 .map {
   height: 700px;
-  width: 100%;
   background-color: #b3f0f0;
 }
 
 .map #map {
   width: 100%;
-  height: 700px;
+}
+
+.info {
+  position: relative;
+  bottom: 30%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info__block {
+  position: absolute;
+  min-height: 450px;
+  max-width: 770px;
+  width: 100%;
+  padding: 60px;
+  background: #ffffff url(../img/form-bg.jpg);
+  background-size: cover;
+  font-size: 18px;
+  -webkit-box-shadow: 0 0 30px -15px #000;
+          box-shadow: 0 0 30px -15px #000;
+}
+
+.info__title {
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.info__title::before {
+  top: 10px;
+}
+
+.info__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info__data, .info__form {
+  max-width: 300px;
+  width: 100%;
+}
+
+.info__form {
+  position: relative;
+  right: 0;
+  min-height: 175px;
+}
+
+.info__text {
+  margin-bottom: 30px;
+}
+
+.info__text:last-child {
+  margin-bottom: 0;
+}
+
+.info__icon {
+  color: #7e5aff;
+  margin-right: 5px;
+}
+
+.info__input {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid rgba(44, 64, 88, 0.3);
+}
+
+.info__input:focus {
+  border-bottom: 1px solid #2c4058;
+}
+
+.info__btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0;
 }
 
 .footer {
@@ -688,11 +765,41 @@ h2::before {
   .header .nav__social {
     display: none;
   }
-  .projects__trade, .projects__commerce {
+  .projects__main-title {
+    margin-bottom: 50px;
+  }
+  .projects__title {
+    font-weight: normal;
+  }
+  .projects__subtitle {
+    display: block;
+    margin-top: 40px;
+  }
+  .projects__img {
+    display: block;
+    width: 100%;
+  }
+  .projects__trade {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .projects__trade-right {
+    margin-left: 0;
+    max-width: 600px;
+  }
+  .projects__commerce {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+  .projects__commerce-left {
+    margin-right: 0;
+    max-width: 600px;
   }
 }
 
@@ -764,6 +871,27 @@ h2::before {
   }
   .news__button-next {
     display: none;
+  }
+  .map {
+    height: 400px;
+  }
+  .info {
+    bottom: 0;
+  }
+  .info__block {
+    position: relative;
+  }
+  .info__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info__form {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

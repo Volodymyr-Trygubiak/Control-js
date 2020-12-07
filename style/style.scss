@@ -6,6 +6,7 @@
 
 .header {
   height: 100vh;
+  min-height: 460px;
   background: #746ff8 url(../img/header-bg.jpg) center no-repeat;
   background-size: cover;
   text-align: center;
@@ -105,6 +106,16 @@
       height: 6px;
       border: 1.5px solid $white;
       border-radius: 50%;
+    
+      .active & {
+        background-color: #fff;
+      }
+    }
+    &:hover {
+
+      &::before {
+        background-color: #fff;
+      }
     }
   }
 
@@ -255,16 +266,16 @@
       margin-left: 50px;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      left: -200px;
-      top: -70px;
-      width: 630px;
-      height: 470px;
-      background-color: #55b7ff;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   left: -200px;
+    //   top: -70px;
+    //   width: 630px;
+    //   height: 470px;
+    //   background-color: #55b7ff;
 
-    }
+    // }
   }
 
   &__commerce {
@@ -281,17 +292,16 @@
       z-index: 1;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      right: -200px;
-      top: -70px;
-      max-width: 630px;
-      width: 100%;
-      height: 470px;
-      background-color: #7e5aff;
-
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   right: -200px;
+    //   top: -70px;
+    //   max-width: 630px;
+    //   width: 100%;
+    //   height: 470px;
+    //   background-color: #7e5aff;
+    // }
   }
 }
 
@@ -411,7 +421,7 @@
       &-bullet {
         width: 10px;
         height: 10px;
-        margin: 0 10px;
+        margin: 10px;
         border: 1px solid $white;
         background-color: transparent;
         opacity: 1;
@@ -422,7 +432,6 @@
       }
     }
   }
-
 
   &__button-prev,
   &__button-next {
@@ -457,6 +466,9 @@
     }
   }
 }
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 20px;
+}
 
 .gallery {
   padding-bottom: 100px;
@@ -488,12 +500,87 @@
 
 .map {
   height: 700px;
-  width: 100%;
-  background-color: #b3f0f0;
 
+  background-color: #b3f0f0;
   #map {
     width: 100%;
-    height: 700px;
+  }
+}
+
+.info {
+  position: relative;
+  bottom: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__block {
+    position: absolute;
+    min-height: 450px;
+    max-width: 770px;
+    width: 100%;
+    padding: 60px;
+    background: $white url(../img/form-bg.jpg);
+    background-size: cover;
+    font-size: 18px;
+    box-shadow: 0 0 30px -15px #000;
+  }
+
+  &__title {
+    padding-top: 20px;
+    margin-bottom: 50px;
+    
+    &::before {
+      top: 10px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__data,
+  &__form {
+    max-width: 300px;
+    width: 100%;
+  }
+  &__form {
+    position: relative;
+    right: 0;
+    min-height: 175px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    color: #7e5aff;
+    margin-right: 5px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid rgba($dark, .3);
+    
+    &:focus {
+      border-bottom: 1px solid $dark;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -544,6 +631,7 @@
 
 
 
+//  slider breakpoin
 
 @media screen and (max-width: 1170px) {
 
@@ -585,10 +673,42 @@
 
   .projects {
 
-    &__trade,
-    &__commerce {
-      flex-direction: column;
+   &__main-title {
+     margin-bottom: 50px;
+   } 
+
+   &__title {
+     font-weight: normal;
+   }
+
+    &__subtitle {
+      display: block;
+      margin-top: 40px;
     }
+
+    &__img {
+      display: block;
+      width: 100%;
+    }
+
+    &__trade {
+      flex-direction: column;
+      margin-bottom: 40px;
+
+      &-right {
+        margin-left: 0;
+        max-width: 600px;
+      }
+    }
+    &__commerce {
+      flex-direction: column-reverse;
+      margin-bottom: 40px;
+      &-left {
+        margin-right: 0;
+        max-width: 600px;
+      }
+    }
+
   }
 }
 
@@ -679,6 +799,26 @@
 
     &__button-next {
       display: none;
+    }
+  }
+
+  .map {
+    height: 400px;
+  }
+  
+  .info {
+    bottom: 0;
+
+    &__block {
+      position: relative;
+    }
+    &__wrap {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__form {
+      margin-bottom: 30px;
     }
   }
 }
